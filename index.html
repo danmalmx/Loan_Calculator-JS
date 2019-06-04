@@ -51,14 +51,71 @@
                   />
                 </div>
               </div>
+              <div class="form-group">
+                <input
+                  type="number"
+                  class="form-control"
+                  id="years"
+                  placeholder="Years to repay"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="button"
+                  value="Calculate"
+                  class="btn btn-dark btn-block"
+                />
+              </div>
             </form>
-            <div class="form-group">
-              <input
-                type="number"
-                class="form-control"
-                id="years"
-                placeholder="Years to repay"
-              />
+            <!-- LOADER HERE -->
+            <!-- RESULTS -->
+            <div id="results">
+              <h5>Results</h5>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"
+                      >Monthly Payment</span
+                    >
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="monthly-payment"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"
+                      >Total Payment</span
+                    >
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-payment"
+                    disabled
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"
+                      >Total Interest</span
+                    >
+                  </div>
+                  <input
+                    type="number"
+                    class="form-control"
+                    id="total-interest"
+                    disabled
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
