@@ -4,8 +4,6 @@ document
   .addEventListener("submit", calculateResults);
 
 function calculateResults(e) {
-  console.log("calculating");
-
   //UI variables
   const amount = document.querySelector("#amount");
   const interest = document.querySelector("#interest");
@@ -27,8 +25,25 @@ function calculateResults(e) {
     totalPayment.value = (monthly * calculatedPayments).toFixed(2);
     totalInterest.value = (monthly * calculatedPayments - principal).toFixed(2);
   } else {
-    console.log("please check nmr");
+    showError("Somethig went wrong. Check the numbers.");
   }
 
   e.preventDefault();
+}
+
+function showError(error) {
+  const errorDiv = document.createElement("div");
+
+  //Get element
+  const card = document.querySelector(".card");
+  const heading = document.querySelector(".heading");
+
+  //Add class
+  errorDiv.className = "alert alert-danger";
+
+  //Text node
+  errorDiv.appendChild(document.createTextNode(error));
+
+  //Insert error above heading
+  card.insertBefore(errorDiv, heading);
 }
